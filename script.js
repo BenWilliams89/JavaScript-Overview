@@ -58,12 +58,22 @@ console.log(name, lastName)
 
     //Comparision operators compare two values and return True or False
     //Useful in descion making and loop programs
-    // <less than, > more than, >= more than or greater than, <= less than or equal too, == is equal to, != is not equal to, === is the same as, !== is not the same as
+    // <less than, > more than, >= more than or greater than, <= less than or equal too, == is the same as, != is not the same as, === is equal to, !== is not equal to
 
     let c = 10;
     let d = 20;
 
     console.log(a < b) // true as 10 is less then 20
+
+    //Logical operators perform logical operations
+    // && = and
+    // || = or
+    //(!) = not 
     
+    let e = 5;
+    let f = 10;
+
+    console.log(e > 0 && f > 0); // returns true
+    console.log(e > 0 && f < 0); //returs false
 
 
