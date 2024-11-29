@@ -234,4 +234,28 @@ console.log(name, lastName)
         console.log(i) // returns 1,2,4,5
     }
 
-    // Functions
+    // Functions - block of code thats performs a specific task - called from anywhere
+
+    function greet() { // greet is the function name
+        console.log('Hello, Ben')
+    }
+    greet(); // calls the function
+
+    // Parameters and arguemnets = (the values between these brackets) = (value1, value2)
+
+    function greet(firstName, lastName) {
+        console.log(`Hello ${firstName}`)
+        console.log('Hello' + firstName + " " lastName)
+    }
+    greet(Ben, Williams); // returns Hello Ben, Hello Ben Williams
+    //     ^      ^
+    //define the arguments when calling the function
+
+    // default parameters - no value produces - if no y it returns NaN
+    function sum(x, y) {
+        console.log(x+y)
+    }
+    sum(10,15) // x = 10, y = 15
+
+    //function return - the return statement is used to return the value when the function is called
+    
