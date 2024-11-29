@@ -38,3 +38,23 @@ console.log(name, lastName)
     //Operaters = + - * / = attrithmatic (Maths)
     let sum = 5 + 3;
     console.log(sum);
+
+    //Assigment operators = (=, +=)
+    let x = 5;
+    x += 3 // plus, equals
+    x **= 3 // 5 to the power of 3 = 5*5*5 = 125
+
+    //increment/Decrement Operators = ++ add 1, -- takeaway 1
+    // prefix
+    let a = 10
+    console.log(++a); // = 11
+    console.log(a); // = 11
+
+    //postfix
+    let b = 10
+    console.log(b++); // = 10
+    console.log(b); // = 11
+
+    
+
+
