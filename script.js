@@ -189,7 +189,7 @@ console.log(name, lastName)
     // a loop inside a loop
 
     for(let i = 1; i < 5; i++) {
-        console.log(i);
+        console.log(i); // returns 1,2,3,4
         
         for(let j = 1; j <=3; j++) {
             console.log('inner loop' + j); // returns 1, innerloop 1, innerloop 2, inner loop 3, 2, inner loop 1, inner loop 2 etc ( i = 1 J = 1, i = 1, j = 2, i = 1 j = 3)
@@ -214,4 +214,24 @@ console.log(name, lastName)
         i++
     } while(i<=5); // returns 1,2,3,4,5
 
-    //
+    // Break and continue
+    // break statement is used ti terminate the loop immediatly
+    // continue skips the value set and continues the loop
+
+    for(let i = 1; i <=5; i++) {
+        
+        if(i == 3) { // when i gets to 3 stop
+            break; // when i gets to 3 stop
+        }
+        console.log(i) // returns 1,2,3
+    }
+
+    for(let i = 1; i <=5; i++) {
+        
+        if(i == 3) { // when i gets to 3 stop
+            continue;
+        }
+        console.log(i) // returns 1,2,4,5
+    }
+
+    // Functions
