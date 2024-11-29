@@ -36,6 +36,7 @@ console.log(name, lastName)
     msg()
 
     //Operaters = + - * / = attrithmatic (Maths)
+    //Operands are the numbers or values themselves (5 & 3 below)
     let sum = 5 + 3;
     console.log(sum);
 
@@ -55,6 +56,14 @@ console.log(name, lastName)
     console.log(b++); // = 10
     console.log(b); // = 11
 
+    //Comparision operators compare two values and return True or False
+    //Useful in descion making and loop programs
+    // <less than, > more than, >= more than or greater than, <= less than or equal too, == is equal to, != is not equal to, === is the same as, !== is not the same as
+
+    let c = 10;
+    let d = 20;
+
+    console.log(a < b) // true as 10 is less then 20
     
 
 
