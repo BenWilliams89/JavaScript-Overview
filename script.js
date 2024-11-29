@@ -90,5 +90,37 @@ console.log(name, lastName)
 
     // operator precedence
     let result = 2 + 3 * 4 //returns 14 = 4 * 3 + 2
-    
 
+    // right to left precedence - exponsiation
+    let results = 2 ** 3 ** 2;
+    // 3 ** 2 = 9 (3 x 3)
+    // 2 ** 9 = 512
+    
+    //control flow statements - handle errors and flow of execution
+    // make decisions, handle loops  and try catch
+
+    //conditional statements = if, else, else if
+    // if statements
+    let age = 20
+
+    if (age > 18) {
+        console.log('Adult');
+    } 
+
+    let country = 'India';
+    let ager = 20
+    
+    if (ager >= 18 && country == "india") {
+        console.log('An adult in India');
+    }
+    //if else & else statements
+    let ages = 16;
+    if (ages > 18) {
+        console.log('Adult')
+    } else if (ages >=16) {
+        console.log('Teenager')
+    } 
+    
+    else {
+        console.log('child')
+    }
