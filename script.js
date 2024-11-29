@@ -124,3 +124,94 @@ console.log(name, lastName)
     else {
         console.log('child')
     }
+
+    // Switch statement - execute a block of code based on the value of an expression
+    let value = 42;
+
+    switch (typeof value) {
+        case 'number':
+            console.log('Number')
+            break;
+        case 'string':
+            console.log('string')
+            break;
+        case 'boolean':
+            console.log('boolean')
+            break;
+        default:
+            console.log('other');
+            break;    
+    } // returns number as value = 42 a number
+
+    let dayName = 2;
+
+    switch (dayName) {
+        case 1:
+            dayName = 'Sunday'
+            break;
+        case 2:
+            dayName = 'Monday'
+            break;
+        case 3:
+            dayName = 'Tuesday'
+            break;
+        default:
+            dayName = 'Invalid'
+            break;
+    } 
+    console.log('The day is: ' + dayName); // returns The day is Monday
+
+    // Ternary Operator
+
+    //condition ? = value_if_true, 
+    //condition : = value_if_false
+
+    let food = 'apple'
+
+    let msg = (food == apple) ? 'yes' : 'no'
+    console.log(msg) // returns yes
+
+    // Loops - are used to repeate a block of code
+    // for loop
+
+    for (let i = 1; i <= 10; i++) { // code that will be repeated
+        console.log('Ben') // Ben will be printed 10 times
+        console.log(i); // prints 1,2,3 etc up to 10
+    }
+
+    let coding = ['javaScript', 'python' 'CPP'] // An Array
+    // indexing       0            1       2
+
+    for(i = 0; i < coding.length; i++) {
+        console.log(coding[i]); // logs Javascript, Python and CPP
+    }
+
+    // a loop inside a loop
+
+    for(let i = 1; i < 5; i++) {
+        console.log(i);
+        
+        for(let j = 1; j <=3; j++) {
+            console.log('inner loop' + j); // returns 1, innerloop 1, innerloop 2, inner loop 3, 2, inner loop 1, inner loop 2 etc ( i = 1 J = 1, i = 1, j = 2, i = 1 j = 3)
+        }
+    }
+
+    // While loop 
+
+    let i = 0;
+
+    while(i <= 10) { // when condition is true the code will run
+        console.log(i) // prints the same value
+        i++ // adds 1 to the value to print 1,2,3,4,5,etc to 10
+    }
+
+    // Do while loop
+
+    let i = 1;
+
+    do {
+        console.log(i)
+        i++
+    } while(i<=5); // returns 1,2,3,4,5
+
+    //
