@@ -475,4 +475,83 @@ console.log(name, lastName)
     const person1 = new Person('Ben, Williams');
     console.log(person1.gender); // adds to the prototype 
 
-    //
+    // change prototype value
+
+    function Person(){
+        this.name = 'Elon Musk'
+    }
+    Person.prototype.age = 25
+    
+    const person1 = new Person(); // new object called person 1
+
+    Person.prototype = { age: 52}
+
+    const person2 = new Person();
+
+    console.log(person1.age) // name and age 25
+    console.log(person2.age) // name and age 52
+
+    //Object destrucuring = extract properties into variables 
+
+    const person = {
+        firstName: 'Ben',
+        lastName: 'Williams'
+    }
+
+    let fName = person.firstname;
+    let lName = person.lastName;
+
+    let {firstName: fName, lastName: lName} = person // data structuring in variables
+    console.log(fName) // prints Ben
+
+    // object literal syntax extentions
+
+    let firstName = 'Ben'
+    const person = {
+        firstName,
+    }
+    console.log(person);
+
+    // JavaScript class
+
+    class Person{
+        constructor(){
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    const person1 = new Person('ben', 35);
+    const person2 = new Person('sam', 32);
+    console.log(person1);
+    console.log(person2);
+
+    // class methods
+
+    class Person{
+        constructor(){
+            this.name = name;
+            this.age = age;
+        }
+        greet(){
+            return 'Hello' + this.name;
+        }
+        changeName(newName){
+            this.name = newName
+        }
+    }
+    const person1 = new Person('ben', 35);
+    person1.changeName('Benji')
+    console.log(person1) // = Benji
+    
+    // getter and setters - allow you to control how properties are accessed
+    // add get or set infront of keyword  to select
+
+    get personName(){
+        return this.name
+    }
+    set changeName(newName) {
+        this.name = newName
+    }
+
+    person1.personName = 'Ben'
