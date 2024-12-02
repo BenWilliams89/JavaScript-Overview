@@ -259,3 +259,22 @@ console.log(name, lastName)
 
     //function return - the return statement is used to return the value when the function is called
     
+    function add(a,b) {
+        return a+b
+    }
+
+    let result = add(10,40)
+    console.log('The sum is: ' + result) // the sum is 50
+
+    function fn1(x) {
+        function fn2(y) {
+            return x * y;
+        } 
+        return fn2
+    }
+    let result = fn1(3);
+    console.log(result); 
+
+    console.log(result(2)); // returns 6 = 3 * 2
+
+    // Callbacks
