@@ -371,7 +371,49 @@ console.log(name, lastName)
         console.log(person[properties + ':']) // prints firstName lastName and age with : after each name
     }
 
-    // Object with a new keyword
+    // Method is an object property that contains a function definition
+
+    const person = {
+        firstName: 'Ben,',
+        lastName: 'Williams',
+        greet: function greet(){
+            console.cog('hello world')
+        } 
+    }
+    person.greet() = // consoles hello world
+
+        ||
+
+        const person = {
+            firstName: 'Ben,',
+            lastName: 'Williams',
+        }
+        function greet(){
+            console.log('hello')
+        }
+        person.greeting = greet;
+
+        person.greeting(); // returns hello
+
+    // this keyword
     
+    const person = {
+        firstName: 'Ben',
+        lastName: 'Williams',
+        greet: function(){
+            console.log('hello + this.firstName') // this === person
+        }
+    }
     
-    
+    person.greet()//calls the function - Hello Ben
+
+    ||
+
+    const person = {
+        firstName: 'Ben',
+        lastName: 'Williams',
+        getFullName: function(){
+            return this.firstname + ' ' + this.lastName
+        }
+    }
+    console.log(person.getFullName());
