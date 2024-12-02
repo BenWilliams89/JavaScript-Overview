@@ -555,3 +555,88 @@ console.log(name, lastName)
     }
 
     person1.personName = 'Ben'
+
+    // classes names vs unnamed
+
+    let Person = class {
+        constructor() {
+            this.name = name
+        }
+        getName () {
+            return this.name
+        }
+    }
+
+    const person1 = new Person('Ben Williams');
+    console.log(person1)
+
+    // class inheritance - use to reuse classes and code
+
+    class Person {
+        constructor(name) {
+            this.name = name
+        }
+        greet() {
+            console.log('Hello'+ this.name)
+        }
+    }
+
+    class Student extends Person { // extends add all the data from person
+
+    }
+    const student1 = new Student('Ben');
+
+    student1.greet(); // Hello Ben
+
+    // JavaScript super Method - Parent & Child
+
+    class Person { // parent class
+        constructor(name){
+            this.name = name;
+        }
+        greet(){
+            console.log('Hello ' + this.name)
+        }
+    }
+    class student extends person { // child class
+        constructor(name) {
+            super(name);
+        }
+    }
+    const student1 = new Student('Peter');
+    student1.greet(); // prints hello Peter
+     
+    // static methods
+
+    class Person {
+        constructor(name) {
+            this.name = name;
+        }
+        static greet(){
+
+            console.log('Hello!')
+        }
+    }
+
+    const person1 = new Person('Peter')
+    person1.greet() // displays an error
+    Person.greet() // prints Hello!
+
+    //private methods - start with a hash
+
+    class Person{
+        constructor(firstName, lastName){
+            this.firstname = firstName;
+            this.lastName = lastName;
+        }
+        #fullName() { // the # makes it private
+            return this.firstName + ' ' + this.lastName
+        }
+        display(){
+            console.log(this.#fullName()); // use the # to call the private method
+        }
+    }
+    const person1= new Person('Peter', 'B')
+    person1.display();
+
+    //
