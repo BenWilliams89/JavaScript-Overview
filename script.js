@@ -277,4 +277,101 @@ console.log(name, lastName)
 
     console.log(result(2)); // returns 6 = 3 * 2
 
-    // Callbacks
+    // Callbacks - placing a function inside a parameter
+
+    function display(result) {
+    console.log(result);
+    }
+    function add(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum)
+    }
+
+    add(10, 20, display) // returns 30
+
+    //Anonymous Function = a function with no name
+
+    let sum = function (x,y) {
+        return x + y;
+    }
+
+    console.log(sum(10, 15)); // = 25
+
+    --
+    (
+    function() {
+        console.log('Hello Ben')
+    }
+    )() // This also runs a  anonymous function
+
+    // Set a message to display after a certain timeframe ie 2 seconds
+
+    set TimeOut(
+        function({
+            console.log('Hello There Ben')
+    }), 
+    2000); // this produces the result Hello there Ben but after 2000 miliseconds (2 seconds)
+
+    // recursive function - calls itself
+
+    function myFunction(){
+        if(condition) {
+            myFunction();
+        } else {
+            //stop calling myFunction otherwise it loops forever
+        }
+    }
+    myFunction()
+
+    Example:
+
+    function countDown(num) {
+        console.log(num);
+        num--;
+        if (num >= 0) {
+        countDown(num);
+        }
+    }
+
+    countDown(10)
+
+    // Objects
+
+    const objectName = {
+        key1: value1,
+        key2: value2,
+    }
+    Example:
+
+    const person = {
+        firstName: 'Ben',
+        lastName: 'Williams',
+        age: 35
+        address: { // nested objects inside a object
+            street: 50 'Barter Close',
+            city: Bristol
+        }
+    }
+    person.company = 'MY Work Desk'; // this add a property
+    delete person.company; // deletes the company
+
+    console.log(person.address.city); //displays the nested object
+
+    console.log(typeof person); // returns object
+    console.log(person) // prints all the deatils assigned - first & last name + age
+
+    person.age // prints the age
+    person['age'] // prints the same just with brackets and strings
+
+    person.age = 40 // this changes the value from 35 to 40
+
+    console.log('age' in person)  // prints true = is the propertyName in objectName
+
+    for( let properties in person) {
+        console.log(person[properties + ':']) // prints firstName lastName and age with : after each name
+    }
+
+    // Object with a new keyword
+    
+    
+    
