@@ -417,3 +417,62 @@ console.log(name, lastName)
         }
     }
     console.log(person.getFullName());
+
+    // JavaScript Constructor Function - used to create objects
+
+    function Person(first, last){
+        this.firstName = first,
+        this.lastName = last
+    }
+
+    const person1 = new Person('Ben, Williaks');
+    const person2 = new Person('Sam, Williams')
+
+    console.log(person1) // prints Ben Williams
+    console.log(person2) // prints Sam Williams
+
+    person1.age = 52
+    console.log(person1); // prints firstname, last name & age
+
+    person2.greet = function(){
+        console.log('Hello ben')
+    }
+
+    person2.greet() // calls and prints hello ben
+
+    ||
+
+    function Person(first, last){
+        this.firstName = first,
+        this.lastName = last,
+        this.getFullName = function(){
+            return this.firstName + " " + this.lastName
+        }
+    }
+
+    const person1 = new Person('Ben, Williaks');
+    const person2 = new Person('Sam, Williams');
+
+    console.log(person1.getFullName());
+
+    // JavaScript prototype = every function and object has its own prototype
+
+    const person = {
+        name: 'Elon'
+    }
+
+    console.log(person) //display name - below this is prototype
+
+    // Prototype inheritance = add properties and methods to a constructor function 
+
+    function Person(first, last){
+        this.firstName = first,
+        this.lastName = last,
+    }
+
+    person.prototype.gender = 'male';
+
+    const person1 = new Person('Ben, Williams');
+    console.log(person1.gender); // adds to the prototype 
+
+    //
