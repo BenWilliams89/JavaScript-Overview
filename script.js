@@ -639,4 +639,4 @@ console.log(name, lastName)
     const person1= new Person('Peter', 'B')
     person1.display();
 
-    //
+    // DOM = Document Object Model
