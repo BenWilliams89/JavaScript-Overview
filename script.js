@@ -710,4 +710,42 @@ console.log(menu.textContent); // prints Home, about,blog & content
 innerText = // only produces visable text so if style = display: none it will not print
 
 
-//Inner HTML
+//Inner HTML - Add text to the webpage
+
+menu.innerHTML = '<h1>Hello</h1>' // prints as a H1 and accepts tags
+menu.textContent = '<h1>Hello</h1>' // prints '<h1>Hello</h1>'
+
+// after method()
+
+Element.after(node)
+menu.after(node1, str1) // adds after your choseln element
+
+//AppendMethod - add mutiple elements
+parentNode.append(newNodes)
+
+// replaceChild
+parentNode.replaceChild(newChild, oldChild)
+
+// clone nodes
+
+let newNode = originalNode.cloneNode();
+let newNode = menu.cloneNode(true); // prints menu - defualt is false and just shows ID
+
+// removeChild()
+parentNode.removeChild(chileNode)
+menu.removeChild(menu.firstElementChild) // removes Home
+
+//insertBefore - insert before an existing node
+parentNode.insertBefore(newNode, exisitingNode)
+menu.insertBefore(newNode, menu.firstElementChild)
+
+//attrubute methods
+
+<input type = 'text' id = 'username' placeholder = 'username'></input> // 3 attributes - type,id,placeholder
+
+let inputBox = document.getElementById('username');
+inputBox.attributes // prints type, id & placeholder
+
+// getattribute()
+
+console.log(inputBox.getAttribute('type'))/// prints text as type = text
