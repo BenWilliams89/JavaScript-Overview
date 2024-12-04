@@ -761,3 +761,37 @@ inputBox.removeAttribute('placeholder');
 console.log(inputBox)// prints type text and username but no placeholder
 
 // Manipulation Elements Style
+
+<input type = 'text' id = 'username' placeholder = 'username' Style = 'backgroundColor: Red; fontSize: 20px;'></input> // Style is like CSS
+
+inputBox.style.padding = '10px'
+console.log(inputBox) // prits the style and adds padding
+
+// CSStext
+
+inputBox.style.cssText = 'width: 200px' // overirdes any existing CSS (cssText)
+inputBox.style.cssText += 'width: 200px' // adds width to the other style elements
+
+// getComputedStyle()
+
+input {
+    background: red;
+    font-size: 12 px;
+}
+
+window.getComputedStyle(element, pseudoElelemnt) // prints all assigned elements that are applied by default
+console.log(window.getComputedStyle(inputBox).backgroundColor); // This will print what background color a website is using
+
+// className Property
+
+<h1 id='title' class='main message'>Ben</h1>
+let title = document.getElementById('title');
+title.className = 'new' // adds a class but overrides the other classes already set
+title.className += 'new' // adds the class without removing the other classes
+title.className // returns the list of classes = main & message
+
+// classList
+title.classList // prints all the classes
+title.classList.add('new', 'new2') // adds the class new and new2
+
+title.classList.remove('message'; // removes the message class)
