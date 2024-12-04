@@ -795,3 +795,57 @@ title.classList // prints all the classes
 title.classList.add('new', 'new2') // adds the class new and new2
 
 title.classList.remove('message'; // removes the message class)
+title.classList.replace('message', 'msg') // replaces message with msg
+title.classList.contains('main'); // prints true
+title.classList.toggle('message') // removes message - cycles past it or adds if a class if not there - both removes and adds
+
+//  javascriptEvents = click events, load events etc
+
+<div id='container'>
+<button type ='button'onclick='console.log("Button Clicked)'>Click Here</button>
+</div> 
+// prints Button Clicked
+
+
+// event handlers/listeners = on click
+onclick // can be used to call a function
+
+function displayMsg() {
+    console.log('Button Clicked from Fn') // button clicked from function
+}
+displayMsg() // runs function
+onclick='displayMsg()' // runs function on button click
+
+console.log(event type) // prints onclick
+
+// this keyword
+<div id='container'>
+<button id='btn' type ='button'onclick='console.log(this)'>Click Here</button>
+</div> 
+// this prints button and its properties
+console.log(id) // prints btn
+(type) // prints button
+
+<div>
+    <button id='btn'>Click Here</button>
+</div>
+
+let btn = documnet.getElementById('btn');
+btn.onclick = function(){
+    console.log('button clicked')
+} // prints button clicked
+
+btn.onclick = null; // removes the event handler
+
+// add Event Listener & Remove Event Listener
+
+let btn = documnet.getElementById('btn');
+addEventListener(event, function, useCapture) // useCapture is boolean - true/false
+
+btn.addEventListener('click', function(){ // 2 parameters
+    console.log('Button Clicked!'); // prints Button clicked when btn clicked
+})
+
+btn.removeEventListener('click'); // removes the event listener
+
+//
