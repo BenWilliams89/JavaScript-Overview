@@ -749,3 +749,15 @@ inputBox.attributes // prints type, id & placeholder
 // getattribute()
 
 console.log(inputBox.getAttribute('type'))/// prints text as type = text
+
+// setAttribute()
+inputBox.setAttribute('name', 'value');
+inputBox.setAttribute('class', 'user'); 
+console.log(inputBox); // prints the attributes with the class attribute added
+
+//removeAttribute
+
+inputBox.removeAttribute('placeholder');
+console.log(inputBox)// prints type text and username but no placeholder
+
+// Manipulation Elements Style
