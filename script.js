@@ -639,4 +639,75 @@ console.log(name, lastName)
     const person1= new Person('Peter', 'B')
     person1.display();
 
-    // DOM = Document Object Model
+    // DOM = Document Object Model - reperensts the HTML page
+    document.
+    getElementById() // id='header '
+    getElemnetByName() // name= 'language' etc
+    getElementsByTagName() // h1 etc
+    getElementsByClassName() // class=''
+
+    //querySelector() 
+    document.querySelector('.message') //takes any potential css class
+    let msg = document.querySelector('.message')
+
+    //queryselectorAll
+    document.querySelectorAll('') // this returns all selected
+
+    //traversing Elemenst - get parent & child
+    //parent
+    <div class='title'> 
+        <p class='text'>'Hello</p>
+        </div>
+    let txt = document.querySelector('.text');
+    console.log(txt.parentNode) // displays Title the parent element
+    
+    let parent = document.querySelector('.title') // seclects the div
+    console.log(parent.firstElementChild); // produces Hello, can add second, third, last or all child by adding just child
+
+    // select the next sibling
+
+    <div class='title'> 
+        <p class='text'>'Hello</p>
+        <p class='second'>HIya</p>
+        </div>
+
+    let second = document.querySelector('.second');
+    console.log(second.previousElementSibling); // produces Hello as previous element was selected second next produces the next one
+
+    //createElement()
+     let div = document.createElement('div') // creates a new div
+     div.innerHTML = '<p> Welcome to the website</p>' // prints this in the console
+     document.body.appendChild(div); // this adds the text to the webpage
+     div.id = 'title'; // adds this to the console
+     console.log(div);
+
+     // AppendChild() - add a node and move to an existing property
+
+     <ul id='menu'>
+     <li>Home</li>
+     <li>About</li>
+     <li>Blog</li>
+     <li>Project</li>
+     </ul>
+
+     let menu = document.getElementById('menu');
+     let list = document.createElement('li');// creates a new list
+     list.innerHTML = 'contact'; // call the text content to the list
+
+     menu.appendChild(list); // adds and prints contact to the list
+
+     // text content
+
+     <ul id='menu'>
+     <li>Home</li>
+     <li>About</li>
+     <li>Blog</li>
+     <li>Project</li>
+     </ul>
+
+let menu = document.getElementById('menu');
+console.log(menu.textContent); // prints Home, about,blog & content
+innerText = // only produces visable text so if style = display: none it will not print
+
+
+//Inner HTML
