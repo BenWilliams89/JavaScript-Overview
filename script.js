@@ -848,4 +848,15 @@ btn.addEventListener('click', function(){ // 2 parameters
 
 btn.removeEventListener('click'); // removes the event listener
 
-//
+// useful events
+
+- mousemove:  // fires when you move the mouse around
+- Mousedown:  // when you press the mouse btn
+- Mouseup:   // when you release the mouse btn
+- Mouseover:   // move from outside to inside element
+- mouseout:   //moves to another element
+- keydown:   // when you press any key on the keyboard
+- keyup:   // relase a key on keyboard
+- keypress: // release when you hold a certain key
+- scroll:    // scroll so far fires an event
+
